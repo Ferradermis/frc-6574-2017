@@ -1,0 +1,134 @@
+
+				//List<Mat> channels = new ArrayList<Mat>(3);
+				//Mat[] channels = new Mat[3];
+				//Core.split(image, channels);
+				
+				//Mat[] channels2 = (Mat[])channels.toArray();
+				
+				//Mat mB = channels.get(0);
+				//Mat mG = channels.get(1);
+				//Mat mR = channels.get(2);
+				
+				//Imgproc.threshold(mR, mR, 30, 255, Imgproc.THRESH_BINARY_INV);
+				//Imgproc.cvtColor(mR, mR, Imgproc.COLOR_RGB2GRAY);
+				//Imgproc.threshold(mG, mG, 200, 255, Imgproc.THRESH_BINARY);
+				//Imgproc.cvtColor(mG, mG, Imgproc.COLOR_RGB2GRAY);
+				//Imgproc.threshold(mB, mB, 30, 255, Imgproc.THRESH_BINARY_INV);
+				//Imgproc.cvtColor(mB, mB, Imgproc.COLOR_RGB2GRAY);
+				
+				/*Mat result = new Mat();
+				image.copyTo(result, mR);
+				result.copyTo(image, mG);
+				image.copyTo(result, mB);*/
+				
+				//Core.subtract(image, mR, image);
+				//Core.subtract(image, mG, image);
+				//Core.subtract(image, mB, image);
+				
+				
+				
+				//List<Mat> items = Arrays.asList(mR, mG, mB);
+				
+				//Core.merge(items, image);
+				
+				
+//				
+				//Mat mSum = new Mat();
+				//Mat mEmpty = new Mat();
+//				
+				//Core.add(mR, mG, mSum, mEmpty, CvType.CV_16UC1);
+				//Core.add(mSum, mB, mSum, mEmpty, CvType.CV_16UC1);
+//				
+				//Core.subtract(image, mSum, image);
+//				Core.norm(mSum, Core.NORM_INF);
+//				
+				//outputStream.putFrame(image);
+				
+//				Imgproc.cvtColor(image, image, Imgproc.COLOR_RGB2GRAY);
+//				Imgproc.blur(image, image, new Size(10, 25));
+//				Imgproc.threshold(image, image, 230, 255, Imgproc.THRESH_BINARY);
+				//Imgproc.adaptiveThreshold(image, image, 150, Imgproc.ADAPTIVE_THRESH_MEAN_C, Imgproc.THRESH_BINARY, 5, 0);
+				
+				
+//				List<MatOfPoint> contours = new ArrayList();
+//				Mat hierarchy = new Mat();
+//				
+//				Mat dilateElement = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(24, 24));
+//				Mat erodeElement = Imgproc.getStructuringElement(Imgproc.MORPH_RECT, new Size(12, 12));
+//				Imgproc.erode(image, image, erodeElement);
+//				Imgproc.erode(image, image, erodeElement);
+//				Imgproc.dilate(image, image, dilateElement);
+//				Imgproc.dilate(image, image, dilateElement);
+//				
+//				Imgproc.findContours(image, contours, hierarchy, Imgproc.RETR_CCOMP, Imgproc.CHAIN_APPROX_SIMPLE);
+//				
+//				if (hierarchy.size().height > 0 && hierarchy.size().width > 0) {
+//					for (int idx = 0; idx >= 0; idx = (int)hierarchy.get(0, idx)[0]) {
+//						Imgproc.drawContours(image, contours, idx, new Scalar(255, 0, 0));
+//					}
+//				}
+//				
+//				ArrayList<Point> centers = new ArrayList<Point>();
+//				/*if (contours.size() == 2) {
+//					int newX = (int)((contours.get(0).toArray()[0].x + contours.get(1).toArray()[1].x) / 2);
+//					int newY = (int)((contours.get(0).toArray()[0].y + contours.get(1).toArray()[1].y) / 2);
+//					Imgproc.rectangle(image, new Point(newX - 5, newY - 5), new Point(newX + 5, newY + 5), new Scalar(255, 255, 255));
+//				} else {*/
+//					for (int i = 0; i < contours.size(); i++) {
+//						Point[] points = contours.get(i).toArray();
+//					
+//						double x = 0;
+//						double y = 0;
+//						for (int j = 0; j < points.length; j++) {
+//							x += points[j].x;
+//							y += points[j].y;
+//						}
+//						x /= points.length;
+//						y /= points.length;
+//						centers.add(new Point(x, y));
+//						Imgproc.rectangle(image, new Point(x - 1, y - 1), new Point(x + 1, y + 1), new Scalar(255, 255, 255));
+//					}
+//					top:for (int i = 0; i < centers.size(); i++) {
+//						for (int j = 0; j < centers.size(); j++) {
+//							if (i == j)
+//								continue;
+//							if (Math.abs(centers.get(i).y - centers.get(j).y) < 2) {
+//								int newX = (int)((centers.get(i).x + centers.get(j).x) / 2);
+//								int newY = (int)((centers.get(i).y + centers.get(j).y) / 2);
+//								Imgproc.rectangle(image, new Point(newX - 5, newY - 5), new Point(newX + 5, newY + 5), new Scalar(255, 255, 255));
+//								break top;
+//							}
+//						}
+//					}
+//				/*}*/
+//				
+//				
+//				
+//				//SmartDashboard.putString("Center Coords", "X: " + x + " Y: " + y);
+				
+//				outputStream.putFrame(image);
+				
+				//Imgproc.cvtColor(source, source, Imgproc.COLOR_RGB2GRAY, 0);
+				//BufferedImage gray = new BufferedImage(source.width(), source.height(), BufferedImage.TYPE_BYTE_GRAY);
+				//byte[] data = ((DataBufferByte) gray.getRaster().getDataBuffer()).getData();
+				//source.get(0, 0, data);
+				
+				
+				
+				//byte[] pixels = ((DataBufferByte) gray.getRaster().getDataBuffer()).getData();
+				//Mat newMat = new Mat();
+				//newMat = new Mat(new Size(gray.getWidth(), gray.getHeight()), CvType.CV_8UC3);
+				//newMat.put(0, 0, pixels);
+				//outputStream.putFrame(newMat);
+				//BufferedImage bimage = image.toBufferedImage();
+				//BufferedImage bimage2 = ImageOperation.grayscale(bimage);
+				//BufferedImage bimage3 = ImageOperation.exponentiate(bimage2, 3);
+				//Dimension data = ImageOperation.findCenterCoords(bimage3);
+				
+				//Imgproc.cvtColor(source, source, Imgproc.COLOR_RGB2GRAY);
+				//outputStream.putFrame(source);
+				//BufferedImage image = ImgConvert.MatToBufferedImage(source);
+				//image = ImageOperation.grayscale(image);
+				//image = ImageOperation.exponentiate(image, 3);
+				//outputStream.putFrame(image.fromBufferedImage(bimage));
+				//outputStream.putFrame(ImgConvert.BufferedImageToMat(image));
