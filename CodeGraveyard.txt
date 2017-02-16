@@ -132,3 +132,182 @@
 				//image = ImageOperation.exponentiate(image, 3);
 				//outputStream.putFrame(image.fromBufferedImage(bimage));
 				//outputStream.putFrame(ImgConvert.BufferedImageToMat(image));
+				
+				
+				
+				
+				
+				/*if (Constants.useMechanum) {
+			if (!Constants.useXbox) {
+				
+				/*if (joystick.getTrigger()) {
+					mecanumDrive.stop();
+				} else {
+					if (Math.abs(x) > Constants.joystickThreshold || Math.abs(y) > Constants.joystickThreshold) {
+						mecanumDrive.move(angle, gyro.getAngle(), x, y);
+					} else {
+						mecanumDrive.stop();
+					}
+					if (Math.abs(twist) > Constants.joystickTwistThreshold) { 
+						mecanumDrive.twist(twist);
+					}
+				}*/
+				
+				
+				/*if (joystick.getRawButton(Constants.MOTOR_SHUTDOWN)) {
+					//mecanumDrive.stop();
+					mecanumDrive2.stop();
+				} else {
+					if (y > Constants.joystickThreshold) {
+						if (joystick.getRawButton(Constants.SPEED_UP)) {
+							mecanumDrive2.frontRight(y);
+							mecanumDrive2.frontLeft(y);
+							mecanumDrive2.backRight(y);
+							mecanumDrive2.backLeft(y);
+						} else if (joystick.getRawButton(Constants.SPEED_DOWN)) {
+							mecanumDrive2.frontRight(y / 2);
+							mecanumDrive2.frontLeft(y / 2);
+							mecanumDrive2.backRight(y / 2);
+							mecanumDrive2.backLeft(y / 2);
+						} else {
+							mecanumDrive2.frontRight(y - Constants.joystickThreshold);
+							mecanumDrive2.frontLeft(y - Constants.joystickThreshold);
+							mecanumDrive2.backRight(y - Constants.joystickThreshold);
+							mecanumDrive2.backLeft(y - Constants.joystickThreshold);
+						}
+						
+					} else if (y < -Constants.joystickThreshold) {
+						if (joystick.getRawButton(Constants.SPEED_UP)) {
+							mecanumDrive2.frontRight(y);
+							mecanumDrive2.frontLeft(y);
+							mecanumDrive2.backRight(y);
+							mecanumDrive2.backLeft(y);
+						} else if (joystick.getRawButton(Constants.SPEED_DOWN)) {
+							mecanumDrive2.frontRight(y / 2);
+							mecanumDrive2.frontLeft(y / 2);
+							mecanumDrive2.backRight(y / 2);
+							mecanumDrive2.backLeft(y / 2);
+						} else {
+							mecanumDrive2.frontRight(y + Constants.joystickThreshold);
+							mecanumDrive2.frontLeft(y + Constants.joystickThreshold);
+							mecanumDrive2.backRight(y + Constants.joystickThreshold);
+							mecanumDrive2.backLeft(y + Constants.joystickThreshold);
+						}
+					} else if (x > Constants.joystickThreshold) {
+						if (joystick.getRawButton(Constants.SPEED_UP)) {
+							mecanumDrive2.frontRight(-x);
+							mecanumDrive2.frontLeft(x);
+							mecanumDrive2.backRight(x);
+							mecanumDrive2.backLeft(-x);
+						} else if (joystick.getRawButton(Constants.SPEED_DOWN)) {
+							mecanumDrive2.frontRight(-x / 2);
+							mecanumDrive2.frontLeft(x / 2);
+							mecanumDrive2.backRight(x / 2);
+							mecanumDrive2.backLeft(-x / 2);
+						} else {
+							mecanumDrive2.frontRight(-x + Constants.joystickThreshold);
+							mecanumDrive2.frontLeft(x - Constants.joystickThreshold);
+							mecanumDrive2.backRight(x - Constants.joystickThreshold);
+							mecanumDrive2.backLeft(-x + Constants.joystickThreshold);
+						}
+					} else if (x < -Constants.joystickThreshold) {
+						if (joystick.getRawButton(Constants.SPEED_UP)) {
+							mecanumDrive2.frontRight(-x);
+							mecanumDrive2.frontLeft(x);
+							mecanumDrive2.backRight(x);
+							mecanumDrive2.backLeft(-x);
+						} else if (joystick.getRawButton(Constants.SPEED_DOWN)) {
+							mecanumDrive2.frontRight(-x / 2);
+							mecanumDrive2.frontLeft(x / 2);
+							mecanumDrive2.backRight(x / 2);
+							mecanumDrive2.backLeft(-x / 2);
+						} else {
+							mecanumDrive2.frontRight(-x - Constants.joystickThreshold);
+							mecanumDrive2.frontLeft(x + Constants.joystickThreshold);
+							mecanumDrive2.backRight(x + Constants.joystickThreshold);
+							mecanumDrive2.backLeft(-x - Constants.joystickThreshold);
+						}
+					} else if (twist < -Constants.joystickTwistThreshold) {
+						mecanumDrive2.frontRight(-twist - Constants.joystickTwistThreshold);
+						mecanumDrive2.frontLeft(twist + Constants.joystickTwistThreshold);
+						mecanumDrive2.backRight(-twist - Constants.joystickTwistThreshold);
+						mecanumDrive2.backLeft(twist + Constants.joystickTwistThreshold);
+					} else if (twist > Constants.joystickTwistThreshold) {
+						mecanumDrive2.frontRight(-twist + Constants.joystickTwistThreshold);
+						mecanumDrive2.frontLeft(twist - Constants.joystickTwistThreshold);
+						mecanumDrive2.backRight(-twist + Constants.joystickTwistThreshold);
+						mecanumDrive2.backLeft(twist - Constants.joystickTwistThreshold);
+					} else {
+						mecanumDrive2.stop();
+					}
+					
+					
+				}
+				
+			} else {
+				
+			}
+		} else {
+			if (Constants.useXbox) {
+				if (xbox.getRawButton(2)) {
+					frontLeft.stopMotor();
+					frontRight.stopMotor();
+					backLeft.stopMotor();
+					backRight.stopMotor();
+				} else {
+					if (Math.abs(xbox.getLeftY()) > Constants.XboxJoystickThreshold || Math.abs(xbox.getRightY()) > Constants.XboxJoystickThreshold) {
+						if (xbox.getLeftY() > Constants.XboxJoystickThreshold) {
+							frontLeft.set(xbox.getLeftY() - Constants.XboxJoystickThreshold);
+							backLeft.set(xbox.getLeftY() - Constants.XboxJoystickThreshold);
+						} else if (xbox.getLeftY() < -Constants.XboxJoystickThreshold) {
+							frontLeft.set(xbox.getLeftY() + Constants.XboxJoystickThreshold);
+							backLeft.set(xbox.getLeftY() + Constants.XboxJoystickThreshold);
+						} else {
+							frontLeft.stopMotor();
+							backLeft.stopMotor();
+						}
+						if (xbox.getRightY() > Constants.XboxJoystickThreshold) {
+							frontRight.set(xbox.getRightY() - Constants.XboxJoystickThreshold);
+							backRight.set(xbox.getRightY() - Constants.XboxJoystickThreshold);
+						} else if (xbox.getRightY() < -Constants.XboxJoystickThreshold) { 
+							frontRight.set(xbox.getRightY() + Constants.XboxJoystickThreshold);
+							backRight.set(xbox.getRightY() + Constants.XboxJoystickThreshold);
+						} else {
+							frontRight.stopMotor();
+							backRight.stopMotor();
+						}
+					} else {
+						frontRight.stopMotor();
+						frontLeft.stopMotor();
+						backRight.stopMotor();
+						backLeft.stopMotor();
+					}
+				}
+			} else {
+				/*if (joystick.getRawBu)()) {
+					tankDrive.stop();
+				} else {
+					//axis 2 = twist
+					if (Math.abs(twist) > Constants.joystickTwistThreshold) {
+						if (twist > Constants.joystickTwistThreshold) {
+							tankDrive.turnRight(twist);
+						} else if (twist < -Constants.joystickTwistThreshold) {
+							tankDrive.turnLeft(twist);
+						} else {
+							tankDrive.stop();
+						}
+						//axis 1 = y
+					} else if (Math.abs(y) > Constants.joystickThreshold) {
+						if (y > Constants.joystickThreshold) {
+							tankDrive.forward(y);
+						} else if (y < -Constants.joystickThreshold) {
+							tankDrive.backward(-y);
+						} else {
+							tankDrive.stop();
+						}
+					} else {
+						tankDrive.stop();
+					}
+				}
+			}
+		}*/
