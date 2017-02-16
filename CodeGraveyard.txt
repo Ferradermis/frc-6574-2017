@@ -311,3 +311,19 @@
 				}
 			}
 		}*/
+		
+		
+		
+		
+				/*if (Constants.useCompressor) {
+			compressor.start();
+		}*/
+		//compressor.setClosedLoopControl(true);
+		
+		/*if (Constants.useCompressor) {
+			if (joystick.getRawButton(6)) {
+				solenoid.set(DoubleSolenoid.Value.kForward);
+			} else if (joystick.getRawButton(4)) {
+				solenoid.set(DoubleSolenoid.Value.kReverse);
+			}
+		}*/
