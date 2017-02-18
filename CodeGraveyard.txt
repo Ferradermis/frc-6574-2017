@@ -327,3 +327,21 @@
 				solenoid.set(DoubleSolenoid.Value.kReverse);
 			}
 		}*/
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		if (Constants.useXbox) {
+			/*SmartDashboard.putDouble("Xbox Left Y Axis", xbox.getLeftY());
+			SmartDashboard.putDouble("Xbox Right Y Axis", xbox.getRightY());
+			SmartDashboard.putDouble("Left Trigger: ", xbox.getLeftTrigger());
+			SmartDashboard.putDouble("Right Trigger: ", xbox.getRightTrigger());*/
+		} else {
+		
+		}
