@@ -1,3 +1,6 @@
+	public static final int AUTO_FORWARD_LONG = ((Integer)null).intValue();
+	public static final int AUTO_FORWARD_SHORT = ((Integer)null).intValue();
+
 
 				//List<Mat> channels = new ArrayList<Mat>(3);
 				//Mat[] channels = new Mat[3];
