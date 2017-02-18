@@ -345,3 +345,15 @@
 		} else {
 		
 		}
+
+
+		//if (Robot.dualJoystick) {
+		//joystick2 = new JoystickController(1);
+		//}
+		//xbox = new XboxController(1);
+		
+		
+		
+		//myRobot = new RobotDrive(0, 2, 1, 3);
+		//tankDrive = new TankDriver(frontLeft, frontRight, backLeft, backRight);
+		//mecanumDrive2 = new MecanumTest(frontLeft, frontRight, backLeft, backRight);
